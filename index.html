@@ -1,38 +1,59 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio de Soussieya</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Soussieya</h1>
-      <p>Développeur Web | Passionné de Full Stack</p>
-    </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Eya Soussi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <section id="about">
-      <h2>À propos de moi</h2>
-      <p>Voici une courte bio à propos de toi.</p>
-    </section>
+    <div class="container">
+        <!-- Photo Profile -->
+        <div class="profile-container">
+            <img src="eya.png" alt="Eya Soussi" class="profile-img">
+            <h1 class="name">Eya Soussi</h1>
+            <p class="title">ICT Student Engineer at ENIT, 22 years old</p>
+        </div>
 
-    <section id="projects">
-      <h2>Mes Projets</h2>
-      <ul>
-        <li>
-          <a href="https://github.com/Soussieya/Projet1">Projet 1</a>
-        </li>
-        <li>
-          <a href="https://github.com/Soussieya/Projet2">Projet 2</a>
-        </li>
-      </ul>
-    </section>
+        <!-- Buttons -->
+        <div class="social-buttons">
+            <a href="https://github.com/Soussieya" target="_blank" class="button github">GitHub</a>
+            <a href="https://www.linkedin.com/in/eya-soussi-b86793288/" target="_blank" class="button linkedin">LinkedIn</a>
+            <a href="mailto:eyasoussi0@gmail.com" class="button mail">Email</a>
+        </div>
 
-    <footer>
-      <p>Contact : eyasoussi0@gmail.com</p>
-    </footer>
+        <!-- Sections -->
+        <div class="sections">
+            <a href="#projects" class="section-button">Projects</a>
+            <a href="#pfa" class="section-button">PFA</a>
+            <a href="#certificates" class="section-button">Certificates</a>
+            <a href="#softskills" class="section-button">Soft Skills</a>
+        </div>
 
-    <script src="script.js"></script>
-  </body>
+        <!-- Contact Form for Mail -->
+        <div class="contact-form" id="contact-form">
+            <h2>Contact Me</h2>
+            <form action="mailto:eyasoussi0@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+</body>
 </html>
+<script>
+  document.querySelector('.mail').addEventListener('click', function (e) {
+      e.preventDefault();  // Empêche l'ouverture de l'email client
+      document.querySelector('.contact-form').style.display = 'block';  // Affiche le formulaire
+  });
+</script>
