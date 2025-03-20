@@ -8,26 +8,48 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact Me</a></li>
-            </ul>
-        </nav>
+        <div class="profile-container">
+            <img src="eya.png" alt="Eya Soussi" class="profile-img">
+            <h1 class="name">Eya Soussi</h1>
+            <p class="title">ICT Student Engineer at ENIT, 22 years old</p>
+            <p class="email">eyasoussi0@gmail.com</p>
+        </div>
+        
+        <div class="social-buttons">
+            <a href="https://github.com/Soussieya" class="social-btn" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/eya-soussi-b86793288/" class="social-btn" target="_blank">LinkedIn</a>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="text-container">
-            <h1>Hi, I'm <span class="highlight">Eya</span></h1>
-            <p>ICT Student Engineer, Passionate about Software Development</p>
-            <a href="mailto:eyasoussi0@gmail.com" class="btn">Contact Me</a>
-        </div>
-        <div class="image-container">
-            <img src="eya.png" alt="Eya Soussi">
+    <section class="about">
+        <h2 id="about-title">About Me</h2>
+        <p id="about-content" style="display: none;">Eya SOUSSI, 22 y/o, 2nd year of Telecommunications at ENIT.<br>Mail: eyasoussi0@gmail.com</p>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Leadership in Scout</li>
+            <li>Team Work</li>
+            <li>General Secretary of WIE ENIT SBAG</li>
+        </ul>
+        <img src="ieee certif.png" alt="IEEE Certificate" class="cert-img">
+    </section>
+
+    <section class="certificates">
+        <h2>Certificates</h2>
+        <div class="cert-gallery">
+            <img src="data camp 1.png" alt="Deep Learning Cert 1">
+            <img src="data camp 2.png" alt="Deep Learning Cert 2">
+            <img src="nvidia 3.png" alt="Nvidia Certificate">
         </div>
     </section>
+
+    <script>
+        document.getElementById("about-title").addEventListener("click", function() {
+            var content = document.getElementById("about-content");
+            content.style.display = content.style.display === "none" ? "block" : "none";
+        });
+    </script>
 </body>
 </html>
