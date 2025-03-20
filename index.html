@@ -3,57 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Eya Soussi</title>
+    <title>Eya Soussi | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        <!-- Photo Profile -->
+    <header>
         <div class="profile-container">
+            <!-- Profile Image -->
             <img src="eya.png" alt="Eya Soussi" class="profile-img">
+            
+            <!-- Name -->
             <h1 class="name">Eya SOUSSI</h1>
+            
+            <!-- Title/Profession -->
             <p class="title">ICT Student Engineer at ENIT, 22 years old</p>
+            
+            <!-- Email -->
+            <p class="email">eyasoussi0@gmail.com</p>
         </div>
-
-        <!-- Buttons -->
+        
+        <!-- Social Media Buttons -->
         <div class="social-buttons">
-            <a href="https://github.com/Soussieya" target="_blank" class="button github">GitHub</a>
-            <a href="https://www.linkedin.com/in/eya-soussi-b86793288/" target="_blank" class="button linkedin">LinkedIn</a>
-            <a href="mailto:eyasoussi0@gmail.com" class="button mail">Email</a>
+            <a href="https://github.com/Soussieya" class="social-btn" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/eya-soussi-b86793288/" class="social-btn" target="_blank">LinkedIn</a>
         </div>
+    </header>
 
-        <!-- Sections -->
-        <div class="sections">
-            <a href="#projects" class="section-button">Projects</a>
-            <a href="#pfa" class="section-button">PFA</a>
-            <a href="#certificates" class="section-button">Certificates</a>
-            <a href="#softskills" class="section-button">Soft Skills</a>
-        </div>
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I am an ICT student at ENIT, passionate about technology and software development. I love learning new skills and taking on challenging projects.</p>
+    </section>
 
-        <!-- Contact Form for Mail -->
-        <div class="contact-form" id="contact-form">
-            <h2>Contact Me</h2>
-            <form action="mailto:eyasoussi0@gmail.com" method="POST" enctype="text/plain">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </div>
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2>My Projects</h2>
+        <p>Check out some of my projects:</p>
+        <!-- Add links to your projects -->
+        <ul>
+            <li><a href="#">Project 1</a></li>
+            <li><a href="#">Project 2</a></li>
+            <li><a href="#">Project 3</a></li>
+        </ul>
+    </section>
 
 </body>
 </html>
-<script>
-  document.querySelector('.mail').addEventListener('click', function (e) {
-      e.preventDefault();  // Empêche l'ouverture de l'email client
-      document.querySelector('.contact-form').style.display = 'block';  // Affiche le formulaire
-  });
-</script>

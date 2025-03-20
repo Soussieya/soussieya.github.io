@@ -1,26 +1,19 @@
 /* General Styles */
-* {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fce4ec; /* Baby pink background */
+  color: #333;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8e1f4; /* Baby pink background */
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.container {
+header {
   text-align: center;
-  width: 100%;
-  max-width: 800px;
+  margin-top: 50px;
 }
 
+/* Profile Section */
 .profile-container {
   margin-bottom: 20px;
 }
@@ -28,106 +21,74 @@ body {
 .profile-img {
   width: 150px;
   height: 150px;
-  border-radius: 50%; /* Circular frame */
-  object-fit: cover;
-  border: 5px solid #d6a3f2; /* Light purple border */
+  border-radius: 50%; /* Circular frame for the image */
+  border: 4px solid #6a4c93; /* Purple border */
 }
 
 .name {
   font-size: 2em;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 .title {
   font-size: 1.2em;
-  color: #555;
+  color: #6a4c93; /* Purple color */
 }
 
-/* Buttons */
+.email {
+  font-size: 1.2em;
+  color: #6a4c93; /* Purple color */
+  margin-top: 10px;
+}
+
+/* Social Buttons */
 .social-buttons {
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
-.button {
+.social-btn {
   text-decoration: none;
   padding: 10px 20px;
-  margin: 5px;
+  margin: 10px;
+  background-color: #6a4c93; /* Purple */
+  color: white;
   border-radius: 5px;
   font-weight: bold;
-  font-size: 1em;
-  color: white;
-  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
-.github {
-  background-color: #333;
+.social-btn:hover {
+  background-color: #4e3579; /* Darker purple on hover */
 }
 
-.linkedin {
-  background-color: #0077b5;
+/* About Section */
+.about, .projects {
+  margin: 50px 20px;
+  text-align: center;
 }
 
-.mail {
-  background-color: #ea4c89;
+h2 {
+  font-size: 2em;
+  color: #6a4c93;
 }
 
-/* Section Buttons */
-.sections {
-  margin: 20px 0;
+/* Projects Section */
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.section-button {
+ul li {
+  margin: 10px 0;
+}
+
+ul li a {
+  color: #6a4c93;
   text-decoration: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  font-size: 1.2em;
-  color: #fff;
-  background-color: #9c4e97; /* Purple button */
-  display: inline-block;
+  font-weight: bold;
 }
 
-.section-button:hover {
-  background-color: #7e398b; /* Darker purple */
+ul li a:hover {
+  text-decoration: underline;
 }
-
-/* Contact Form */
-.contact-form {
-  display: none;
-  margin-top: 30px;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact-form label {
-  font-size: 1.1em;
-  margin-top: 10px;
-}
-
-.contact-form input, .contact-form textarea {
-  width: 80%;
-  padding: 10px;
-  margin: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.contact-form button {
-  padding: 10px 20px;
-  background-color: #ea4c89;
-  color: white;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #d33c73; /* Darker pink for hover */
-}
-
