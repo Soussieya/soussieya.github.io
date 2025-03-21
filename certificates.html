@@ -26,14 +26,14 @@
             <!-- IEEE Certificate -->
             <div class="certificate">
                 <h3>IEEE Certificate</h3>
-                <button onclick="toggleImage('ieee-certif')">IEEE Certificate</button>
-                <img id="ieee-certif" src="ieee_certif.png" alt="IEEE Certificate" class="hidden">
+                <button onclick="toggleImage('ieee-certif')">View Certificate</button>
+                <img id="ieee-certif" src="ieee.png" alt="IEEE Certificate" class="hidden">
             </div>
 
             <!-- Deep Learning with DataCamp -->
             <div class="certificate">
                 <h3>Deep Learning with DataCamp</h3>
-                <button onclick="toggleButtons('datacamp-options')">Deep Learning with DataCamp</button>
+                <button onclick="toggleButtons('datacamp-options')">View Options</button>
                 <div id="datacamp-options" class="hidden">
                     <button onclick="toggleImage('keras-certif')">With Keras</button>
                     <button onclick="toggleImage('pytorch-certif')">With PyTorch</button>
@@ -45,7 +45,7 @@
             <!-- Deep Learning with NVIDIA -->
             <div class="certificate">
                 <h3>Deep Learning with NVIDIA</h3>
-                <button onclick="toggleImage('nvidia-certif')">Deep Learning with NVIDIA</button>
+                <button onclick="toggleImage('nvidia-certif')">View Certificate</button>
                 <img id="nvidia-certif" src="3.png" alt="Deep Learning with NVIDIA" class="hidden">
             </div>
 
@@ -59,13 +59,4 @@
     <script>
         function toggleImage(id) {
             var img = document.getElementById(id);
-            img.classList.toggle("hidden");
-        }
-
-        function toggleButtons(id) {
-            var buttons = document.getElementById(id);
-            buttons.classList.toggle("hidden");
-        }
-    </script>
-</body>
-</html>
+            img.classList.toggle
