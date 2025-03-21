@@ -22,12 +22,24 @@
     <section id="certificates">
         <h2>Certificates</h2>
         <div class="certificates-container">
-
+            
             <!-- IEEE Certificate -->
             <div class="certificate">
                 <h3>IEEE Certificate</h3>
-                <button onclick="toggleImage('ieee-certif')">View Certificate</button>
+                <button onclick="toggleImage('ieee-certif')">IEEE Certificate</button>
                 <img id="ieee-certif" src="ieee_certif.png" alt="IEEE Certificate" class="hidden">
+            </div>
+
+            <!-- Deep Learning with DataCamp -->
+            <div class="certificate">
+                <h3>Deep Learning with DataCamp</h3>
+                <button onclick="toggleButtons('datacamp-options')">Deep Learning with DataCamp</button>
+                <div id="datacamp-options" class="hidden">
+                    <button onclick="toggleImage('keras-certif')">With Keras</button>
+                    <button onclick="toggleImage('pytorch-certif')">With PyTorch</button>
+                </div>
+                <img id="keras-certif" src="1.png" alt="Deep Learning with Keras" class="hidden">
+                <img id="pytorch-certif" src="2.png" alt="Deep Learning with PyTorch" class="hidden">
             </div>
 
             <!-- Deep Learning with NVIDIA -->
@@ -35,18 +47,6 @@
                 <h3>Deep Learning with NVIDIA</h3>
                 <button onclick="toggleImage('nvidia-certif')">Deep Learning with NVIDIA</button>
                 <img id="nvidia-certif" src="3.png" alt="Deep Learning with NVIDIA" class="hidden">
-            </div>
-
-            <!-- Deep Learning with DataCamp -->
-            <div class="certificate">
-                <h3>Deep Learning with DataCamp</h3>
-                <button onclick="showDataCampOptions()">Deep Learning with DataCamp</button>
-                <div id="datacamp-options" class="hidden">
-                    <button onclick="toggleImage('keras')">With Keras</button>
-                    <button onclick="toggleImage('pytorch')">With PyTorch</button>
-                </div>
-                <img id="keras" src="1.png" alt="Deep Learning with Keras" class="hidden">
-                <img id="pytorch" src="2.png" alt="Deep Learning with PyTorch" class="hidden">
             </div>
 
         </div>
@@ -58,13 +58,13 @@
 
     <script>
         function toggleImage(id) {
-            let img = document.getElementById(id);
+            var img = document.getElementById(id);
             img.classList.toggle("hidden");
         }
 
-        function showDataCampOptions() {
-            let options = document.getElementById("datacamp-options");
-            options.classList.toggle("hidden");
+        function toggleButtons(id) {
+            var buttons = document.getElementById(id);
+            buttons.classList.toggle("hidden");
         }
     </script>
 </body>

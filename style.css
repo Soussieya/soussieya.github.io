@@ -1,40 +1,67 @@
+/* General Page Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
 header {
   background-color: #333;
   color: white;
-  padding: 15px 0;
-  text-align: center;
+  padding: 20px;
 }
 
-nav ul {
+header nav ul {
   list-style: none;
+  margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 15px;
+header nav ul li {
+  margin: 0 15px;
 }
 
-nav ul li a {
+header nav ul li a {
   color: white;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.active {
-  font-weight: bold;
+header nav ul li a.active {
   text-decoration: underline;
 }
 
-#certificates {
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #333;
+  color: white;
   text-align: center;
-  margin-top: 20px;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+}
+
+/* Certificates Section */
+#certificates {
+  background-color: white;
+  text-align: center;
+}
+
+#certificates h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .certificates-container {
@@ -45,33 +72,64 @@ nav ul li a {
 }
 
 .certificate {
-  background: white;
-  padding: 15px;
-  border-radius: 5px;
-  width: 300px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border: 2px solid #0077b5;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
 }
 
-button {
-  background-color: #007bff;
+.certificate h3 {
+  font-size: 20px;
+  color: #0077b5;
+}
+
+.certificate button {
+  padding: 10px 20px;
+  background-color: #0077b5;
   color: white;
   border: none;
-  padding: 10px;
-  margin-top: 10px;
-  cursor: pointer;
   border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  margin-top: 10px;
 }
 
-button:hover {
-  background-color: #0056b3;
+.certificate button:hover {
+  opacity: 0.8;
 }
 
 .hidden {
   display: none;
 }
 
-img {
-  width: 100%;
+.certificate img {
+  max-width: 100%;
   margin-top: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
+}
+
+#datacamp-options {
+  margin-top: 10px;
+}
+
+#datacamp-options button {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certificates-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .certificate {
+      width: 100%;
+  }
 }
