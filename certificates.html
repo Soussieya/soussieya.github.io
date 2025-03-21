@@ -24,15 +24,16 @@
         <div class="certificates-container">
 
             <!-- IEEE Certificate -->
-            <div class="certificate" onclick="toggleImage('ieee-certif')">
+            <div class="certificate">
                 <h3>IEEE Certificate</h3>
+                <button onclick="toggleImage('ieee-certif')">View Certificate</button>
                 <img id="ieee-certif" src="ieee_certif.png" alt="IEEE Certificate" class="hidden">
             </div>
 
             <!-- Deep Learning with NVIDIA -->
-            <div class="certificate" onclick="toggleImage('nvidia-certif')">
+            <div class="certificate">
                 <h3>Deep Learning with NVIDIA</h3>
-                <button>Deep Learning with NVIDIA</button>
+                <button onclick="toggleImage('nvidia-certif')">Deep Learning with NVIDIA</button>
                 <img id="nvidia-certif" src="nvidia.png" alt="Deep Learning with NVIDIA" class="hidden">
             </div>
 
@@ -41,8 +42,8 @@
                 <h3>Deep Learning with DataCamp</h3>
                 <button onclick="showDataCampOptions()">Deep Learning with DataCamp</button>
                 <div id="datacamp-options" class="hidden">
-                    <button id="keras-btn" onclick="toggleImage('keras')">With Keras</button>
-                    <button id="pytorch-btn" onclick="toggleImage('pytorch')">With PyTorch</button>
+                    <button onclick="toggleImage('keras')">With Keras</button>
+                    <button onclick="toggleImage('pytorch')">With PyTorch</button>
                 </div>
                 <img id="keras" src="1.png" alt="Deep Learning with Keras" class="hidden">
                 <img id="pytorch" src="2.png" alt="Deep Learning with PyTorch" class="hidden">
@@ -62,9 +63,8 @@
         }
 
         function showDataCampOptions() {
-            document.getElementById("datacamp-options").classList.remove("hidden");
-            document.getElementById("keras-btn").style.display = "inline-block";
-            document.getElementById("pytorch-btn").style.display = "inline-block";
+            let options = document.getElementById("datacamp-options");
+            options.classList.toggle("hidden");
         }
     </script>
 </body>
