@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificates | Eya Soussi</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -23,33 +22,43 @@
     <section id="certificates">
         <h2>Certificates</h2>
         <div class="certificates-container">
-            <div class="certificate">
+
+            <!-- IEEE Certificate -->
+            <div class="certificate" onclick="toggleImage('ieee-certif')">
                 <h3>IEEE Certificate</h3>
-                <a href="ieee_certif.png" target="_blank">
-                    <img src="ieee_certif.png" alt="IEEE Certificate">
-                </a>
+                <img id="ieee-certif" src="ieee_certif.png" alt="IEEE Certificate" class="hidden">
             </div>
 
+            <!-- Deep Learning with DataCamp -->
             <div class="certificate">
                 <h3>Deep Learning with DataCamp</h3>
-                <button class="toggle-btn" onclick="toggleDeepLearningButtons()">Show Details</button>
-                <div class="hidden-buttons">
-                    <button onclick="showImage('1.png')">With Keras</button>
-                    <button onclick="showImage('2.png')">With PyTorch</button>
+                <button onclick="showDataCampOptions()">Deep Learning with DataCamp</button>
+                <div id="datacamp-options" class="hidden">
+                    <button id="keras-btn" onclick="toggleImage('keras')">With Keras</button>
+                    <button id="pytorch-btn" onclick="toggleImage('pytorch')">With PyTorch</button>
                 </div>
-                <img id="deep-learning-img" class="hidden" src="" alt="Deep Learning Certificate">
+                <img id="keras" src="1.png" alt="Deep Learning with Keras" class="hidden">
+                <img id="pytorch" src="2.png" alt="Deep Learning with PyTorch" class="hidden">
             </div>
 
-            <div class="certificate">
-                <h3>Deep Learning with NVIDIA</h3>
-                <button onclick="showImage('3.png')">Show Certificate</button>
-                <img id="nvidia-cert-img" class="hidden" src="" alt="NVIDIA Certificate">
-            </div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Eya Soussi. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleImage(id) {
+            let img = document.getElementById(id);
+            img.classList.toggle("hidden");
+        }
+
+        function showDataCampOptions() {
+            document.getElementById("datacamp-options").classList.remove("hidden");
+            document.getElementById("keras-btn").style.display = "inline-block";
+            document.getElementById("pytorch-btn").style.display = "inline-block";
+        }
+    </script>
 </body>
 </html>

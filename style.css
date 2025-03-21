@@ -79,6 +79,12 @@ footer {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
   text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.certificate:hover {
+  transform: scale(1.05);
 }
 
 .certificate img {
@@ -88,14 +94,11 @@ footer {
   margin-top: 10px;
 }
 
-/* Buttons for Extra Certificate Display */
-.certificate-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+.hidden {
+  display: none;
 }
 
+/* Buttons */
 button {
   padding: 10px 15px;
   background-color: #0077b5;
@@ -105,14 +108,16 @@ button {
   font-size: 16px;
   cursor: pointer;
   transition: opacity 0.3s;
+  margin: 5px;
 }
 
 button:hover {
   opacity: 0.8;
 }
 
-/* Hidden Images */
-.hidden {
+/* Hide Keras/PyTorch buttons initially */
+#keras-btn,
+#pytorch-btn {
   display: none;
 }
 
