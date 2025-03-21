@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificates | Eya Soussi</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -21,11 +22,29 @@
 
     <section id="certificates">
         <h2>Certificates</h2>
-        <div class="certificate-buttons">
-            <button onclick="window.location.href='ieee_certif.png'">IEEE Certificate</button>
-            <button onclick="window.location.href='deep_learning_1.png'">Deep Learning Certificate 1</button>
-            <button onclick="window.location.href='deep_learning_2.png'">Deep Learning Certificate 2</button>
-            <button onclick="window.location.href='nvidia_certif_3.png'">NVIDIA Certificate</button>
+        <div class="certificates-container">
+            <div class="certificate">
+                <h3>IEEE Certificate</h3>
+                <a href="ieee_certif.png" target="_blank">
+                    <img src="ieee_certif.png" alt="IEEE Certificate">
+                </a>
+            </div>
+
+            <div class="certificate">
+                <h3>Deep Learning with DataCamp</h3>
+                <button class="toggle-btn" onclick="toggleDeepLearningButtons()">Show Details</button>
+                <div class="hidden-buttons">
+                    <button onclick="showImage('1.png')">With Keras</button>
+                    <button onclick="showImage('2.png')">With PyTorch</button>
+                </div>
+                <img id="deep-learning-img" class="hidden" src="" alt="Deep Learning Certificate">
+            </div>
+
+            <div class="certificate">
+                <h3>Deep Learning with NVIDIA</h3>
+                <button onclick="showImage('3.png')">Show Certificate</button>
+                <img id="nvidia-cert-img" class="hidden" src="" alt="NVIDIA Certificate">
+            </div>
         </div>
     </section>
 
