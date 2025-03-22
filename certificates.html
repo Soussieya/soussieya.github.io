@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
@@ -22,7 +23,7 @@
     <section id="certificates">
         <h2>Certificates</h2>
         <div class="certificates-container">
-            
+
             <!-- IEEE Certificate -->
             <div class="certificate">
                 <h3>IEEE Certificate</h3>
@@ -59,4 +60,26 @@
     <script>
         function toggleImage(id) {
             var img = document.getElementById(id);
-            img.classList.toggle
+            if (img.style.display === "none" || img.classList.contains("hidden")) {
+                img.style.display = "block";
+                img.classList.remove("hidden");
+            } else {
+                img.style.display = "none";
+                img.classList.add("hidden");
+            }
+        }
+
+        function toggleButtons(id) {
+            var options = document.getElementById(id);
+            if (options.style.display === "none" || options.classList.contains("hidden")) {
+                options.style.display = "block";
+                options.classList.remove("hidden");
+            } else {
+                options.style.display = "none";
+                options.classList.add("hidden");
+            }
+        }
+    </script>
+
+</body>
+</html>
