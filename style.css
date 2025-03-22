@@ -75,6 +75,7 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 80px 10%;
+  flex-direction: row;
 }
 
 .home-content {
@@ -117,6 +118,7 @@ section {
   width: 300px;
   border-radius: 50%;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  margin-left: 20px; /* Adds space between the text and the image */
 }
 
 /* Hidden class for elements */
