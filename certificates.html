@@ -58,26 +58,17 @@
     </footer>
 
     <script>
+        // Toggle image visibility on button click
         function toggleImage(id) {
             var img = document.getElementById(id);
-            if (img.style.display === "none" || img.classList.contains("hidden")) {
-                img.style.display = "block";
-                img.classList.remove("hidden");
-            } else {
-                img.style.display = "none";
-                img.classList.add("hidden");
-            }
+            // Toggle the 'hidden' class to show/hide images
+            img.classList.toggle('hidden');
         }
 
+        // Toggle visibility of buttons
         function toggleButtons(id) {
             var options = document.getElementById(id);
-            if (options.style.display === "none" || options.classList.contains("hidden")) {
-                options.style.display = "block";
-                options.classList.remove("hidden");
-            } else {
-                options.style.display = "none";
-                options.classList.add("hidden");
-            }
+            options.classList.toggle('hidden');
         }
     </script>
 

@@ -7,11 +7,9 @@
 }
 
 /* Background and header */
-/* Set the same background for all pages */
-/* General page styling */
 body {
   background: linear-gradient(to bottom, #f4f4f4, #e0e0ff);
-    color: #333;/* Ensure text is readable */
+  color: #333;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -20,7 +18,7 @@ body {
   flex-direction: column;
 }
 
-/* Header remains white */
+/* Header styling */
 header {
   display: flex;
   justify-content: space-between;
@@ -33,12 +31,6 @@ header {
 nav {
   display: flex;
   align-items: center;
-}
-
-nav .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #6a0dad;
 }
 
 nav ul {
@@ -60,7 +52,7 @@ nav ul li a:hover {
   color: #6a0dad;
   border-bottom: 2px solid #6a0dad;
 }
-/* Ensure content fills the screen */
+
 section {
   flex-grow: 1;
   display: flex;
@@ -69,68 +61,15 @@ section {
   justify-content: center;
 }
 
-/* Home Section */
-.home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 10%;
-}
-
-.home-content {
-  max-width: 500px;
-}
-
-.home-content h1 {
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.home-content h2 {
-  font-size: 24px;
-  color: #6a0dad;
-  margin: 10px 0;
-}
-
-.home-content p {
-  font-size: 18px;
-  margin: 20px 0;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #6a0dad;
-  color: white;
-  font-size: 18px;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #4b0082;
-}
-
-/* Image Styling */
-.home-img img {
-  width: 300px;
-  border-radius: 50%;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-
-
-/* Flexbox layout to make certificates appear in a row */
 .certificates-container {
   display: flex;
-  flex-wrap: wrap; /* Ensures responsiveness */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
 }
 
-/* Each certificate in a box */
+/* Certificate box styling */
 .certificate {
   text-align: center;
   background: white;
@@ -140,12 +79,20 @@ section {
   width: 280px;
 }
 
+/* Styling for images */
 .certificate img {
   width: 100%;
   margin-top: 10px;
   border-radius: 5px;
+  display: none; /* Hide by default */
 }
 
+/* Hidden class for elements */
+.hidden {
+  display: none !important;
+}
+
+/* Button styling */
 button {
   background: #6a0dad;
   color: white;
