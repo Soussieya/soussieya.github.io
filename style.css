@@ -1,57 +1,110 @@
-body {
-  font-family: Arial, sans-serif;
+/* General Styling */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background and header */
+body {
+  background: linear-gradient(to bottom, #f4f4f4, #e0e0ff);
+  color: #333;
 }
 
 header {
-  background: #333;
-  padding: 15px 0;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6a0dad;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 15px;
+  display: flex;
+  gap: 20px;
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: 0.3s;
 }
 
-nav ul li a.active {
+nav ul li a.active,
+nav ul li a:hover {
+  color: #6a0dad;
+  border-bottom: 2px solid #6a0dad;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+}
+
+.home-content {
+  max-width: 500px;
+}
+
+.home-content h1 {
+  font-size: 48px;
   font-weight: bold;
-  text-decoration: underline;
 }
 
-section {
-  padding: 50px;
-  background: white;
-  margin: 20px;
-  border-radius: 10px;
+.home-content h2 {
+  font-size: 24px;
+  color: #6a0dad;
+  margin: 10px 0;
 }
 
-.project, .certificate {
-  margin-bottom: 30px;
+.home-content p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #6a0dad;
+  color: white;
+  font-size: 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #4b0082;
+}
+
+/* Image Styling */
+.home-img img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background: #fff;
-}
-
-.hidden {
-  display: none;
-}
-
-img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
+  background: white;
+  margin-top: 50px;
 }
