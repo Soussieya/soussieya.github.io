@@ -7,10 +7,19 @@
 }
 
 /* Background and header */
+/* Set the same background for all pages */
 body {
-  background: linear-gradient(to bottom, #f4f4f4, #e0e0ff);
-  color: #333;
+  background: linear-gradient(to bottom, #f0f0ff, #d4c1ff); /* Light purple gradient */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
+/* Remove footer */
+footer {
+  display: none;
+}
+
 
 header {
   display: flex;
@@ -101,16 +110,7 @@ nav ul li a:hover {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: white;
-  margin-top: 50px;
-}
-.hidden {
-  display: none;
-}
+
 
 /* Flexbox layout to make certificates appear in a row */
 .certificates-container {
